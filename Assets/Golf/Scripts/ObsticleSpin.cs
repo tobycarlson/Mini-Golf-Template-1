@@ -1,10 +1,8 @@
 using UnityEngine;
 
-public class ObsticalLeftRight : MonoBehaviour
+public class ObsticalSpin : MonoBehaviour
 {
-    float move_speed;
-    float move_dir;
-    
+    public int spin_speed = 150;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,6 +13,6 @@ public class ObsticalLeftRight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       transform.Rotate(new Vector3(0, spin_speed, 0) * Time.deltaTime); 
     }
 }
